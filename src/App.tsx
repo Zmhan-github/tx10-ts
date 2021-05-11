@@ -1,28 +1,27 @@
-import React, { useState } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from '@material-ui/core/Container';
-import { RegistrationForm } from './component/RegistrationForm'
 import './App.css';
 
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import React, { useState } from 'react';
 
+import RegistrationForm from './component/RegistrationForm';
 
-function App() {
-    const [data, setData] = useState<string>('')
+const App: any = () => {
+  const [data, setData] = useState<string>('');
 
-    const callback = (data: string) => {
-        setData(data)
-    }
-
+  const callback = (jsonStr: string) => {
+    setData(jsonStr);
+  };
 
   return (
     <div className="App">
-        <CssBaseline />
-        <Container maxWidth="sm">
-            <RegistrationForm callback={callback} />
-            <code>{data}</code>
-        </Container>
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <RegistrationForm callback={callback} />
+        <code>{data}</code>
+      </Container>
     </div>
   );
-}
+};
 
 export default App;
