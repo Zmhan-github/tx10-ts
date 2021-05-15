@@ -9,3 +9,9 @@
     min-height: 500px;
     flex-wrap: nowrap;
 }
+
+.My-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
